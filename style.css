@@ -47,3 +47,32 @@ button {
   padding: 10px;
   margin-bottom: 15px;
 }
+.auth-container {
+  width: 350px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.auth-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-container input,
+.auth-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.auth-container button {
+  width: 100%;
+}
+
+.auth-container p {
+  text-align: center;
+  margin-top: 20px;
+}
