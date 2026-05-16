@@ -1,30 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Employee Dashboard</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Employee Dashboard</h1>
+<nav>
 
-<div class="card">
+  <h1>Employee Dashboard</h1>
 
-  <h3>Clock In</h3>
-  <input type="time">
+  <button onclick="logoutUser()">
+    Logout
+  </button>
 
-  <h3>Clock Out</h3>
-  <input type="time">
+</nav>
 
-  <h3>Break Time</h3>
-  <input type="number">
+<div class="dashboard-container">
 
-  <h3>Hourly Rate</h3>
-  <input type="number">
+  <!-- Summary Cards -->
 
-  <button>Calculate Salary</button>
+  <div class="summary-grid">
+
+    <div class="summary-card">
+      <h3>Today's Hours</h3>
+      <p>8h</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>Today's Earnings</h3>
+      <p>£104</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>Weekly Hours</h3>
+      <p>40h</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>Monthly Earnings</h3>
+      <p>£2,100</p>
+    </div>
+
+  </div>
+
+  <!-- Shift Calculator -->
+
+  <div class="card">
+
+    <h2>Add Shift</h2>
+
+    <label>Date</label>
+    <input type="date" id="shiftDate">
+
+    <label>Clock In</label>
+    <input type="time" id="clockIn">
+
+    <label>Clock Out</label>
+    <input type="time" id="clockOut">
+
+    <label>Break Time (Hours)</label>
+    <input type="number"
+           id="breakTime"
+           value="0">
+
+    <label>Hourly Rate (£)</label>
+    <input type="number"
+           id="hourlyRate">
+
+    <button onclick="calculateSalary()">
+      Calculate Salary
+    </button>
+
+    <div id="salaryResult"></div>
+
+  </div>
+
+  <!-- Calendar Section -->
+
+  <div class="card">
+
+    <h2>Shift Calendar</h2>
+
+    <div class="calendar-box">
+
+      <p>📅 Upcoming Shifts</p>
+
+      <ul>
+        <li>12 Aug - Morning Shift - 9AM to 5PM</li>
+        <li>14 Aug - Night Shift - 8PM to 6AM</li>
+        <li>16 Aug - Holiday</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- Recent Shifts -->
+
+  <div class="card">
+
+    <h2>Recent Shifts</h2>
+
+    <table>
+
+      <tr>
+        <th>Date</th>
+        <th>Hours</th>
+        <th>Salary</th>
+      </tr>
+
+      <tr>
+        <td>10 Aug</td>
+        <td>8h</td>
+        <td>£104</td>
+      </tr>
+
+      <tr>
+        <td>11 Aug</td>
+        <td>9h</td>
+        <td>£117</td>
+      </tr>
+
+    </table>
+
+  </div>
 
 </div>
+
+<script src="auth.js"></script>
+
+<script src="dashboard.js"></script>
 
 </body>
 </html>
