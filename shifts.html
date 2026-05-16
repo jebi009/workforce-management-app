@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Shifts</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main-layout">
+
+  <!-- Sidebar -->
+
+  <div class="sidebar">
+
+    <h2>WorkForce</h2>
+
+    <ul>
+
+      <li>
+        <a href="employee-dashboard.html">
+          🏠 Dashboard
+        </a>
+      </li>
+
+      <li>
+        <a href="shifts.html">
+          ⏰ My Shifts
+        </a>
+      </li>
+
+      <li>
+        <a href="calendar.html">
+          📅 Calendar
+        </a>
+      </li>
+
+      <li>
+        <a href="payroll.html">
+          💰 Payroll
+        </a>
+      </li>
+
+      <li>
+        <a href="attendance.html">
+          ✅ Attendance
+        </a>
+      </li>
+
+      <li onclick="logoutUser()">
+        🚪 Logout
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="main-content">
+
+    <div class="topbar">
+
+      <h1>My Shifts</h1>
+
+      <p>Manage your work shifts</p>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Add New Shift</h2>
+
+      <input type="date">
+
+      <input type="time">
+
+      <input type="time">
+
+      <input type="number"
+             placeholder="Break Hours">
+
+      <input type="number"
+             placeholder="Hourly Rate">
+
+      <button>
+        Save Shift
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>
